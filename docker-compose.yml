@@ -1,0 +1,51 @@
+version: "3.9"
+
+services:
+  backend:
+    build: ./backend
+    container_name: surveys_backend
+    restart: always
+    ports:
+      - "8000:8000"
+    environment:
+      - TZ=${TZ}
+      - DATABASE_NAME=${DATABASE_NAME}
+      - DATABASE_USER=${DATABASE_USER}
+      - DATABASE_PASS=${DATABASE_PASS}
+      - DATABASE_PORT=${DATABASE_PORT}
+    security_opt:
+      - no-new-privileges:true
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - ./backend:/sources
+      - /etc/localtime:/etc/localtime:ro
+    depends_on:
+      - surveys_bd
+    networks:
+      - surveys-net
+
+  surveys_bd:
+    image: postgres:${BD_VERSION}
+    container_name: surveys_bd
+    restart: always
+    networks:
+      - surveys-net
+    environment:
+      - POSTGRES_USER=${DATABASE_USER}
+      - POSTGRES_PASSWORD=${DATABASE_PASS}
+      - POSTGRES_DB=${DATABASE_NAME}
+      - TZ=${TZ}
+    security_opt:
+      - no-new-privileges:true
+    volumes:
+      - ./backend/postgres:/var/lib/postgresql/data
+      - /etc/localtime:/etc/localtime:ro
+
+networks:
+  surveys-net:
+    name: surveys-net
+    external: false
+  #
+  # traefik:
+  #   name: traefik
+  #   external: true
