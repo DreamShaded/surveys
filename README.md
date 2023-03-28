@@ -21,7 +21,7 @@ Django v4.1.7, PostgreSQL 15.2
 
 Теперь можно менять всё в папке backend, сразу цепляется и обновляется, доступно всё по пути ```http://localhost:8000```
 
-
+TODO: спрятать Django secret key  в .env
 
 ## Фронтенд:
 React 18.2, NodeJS 18
