@@ -1,0 +1,19 @@
+{
+  "folders": [
+    {
+      "path": "./",
+      "name": "root"
+    },
+    {
+      "path": "./backend",
+      "name": "Python"
+    },
+    {
+      "path": "./frontend",
+      "name": "React"
+    }
+  ],
+  "settings": {
+    "workbench.colorCustomizations": {}
+  }
+}
