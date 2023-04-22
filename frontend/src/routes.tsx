@@ -1,12 +1,11 @@
 import {
-  createBrowserRouter,
-} from "react-router-dom";
-
+  createBrowserRouter
+} from 'react-router-dom'
 import Index from './pages'
 
 export const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <Index />,
   },
-]);
+])
