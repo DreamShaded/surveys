@@ -26,4 +26,5 @@ TODO: спрятать Django secret key  в .env
 ## Фронтенд:
 React 18.2, NodeJS 18
 
-TODO: завести фронтенд
+1. Установить [NodeJS](https://nodejs.org/ru)
+2.
