@@ -3,20 +3,14 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: [
-    'plugin:react/recommended',
-    'standard-with-typescript',
-  ],
-  overrides: [
-  ],
+  extends: ['plugin:react/recommended', 'standard-with-typescript', 'plugin:storybook/recommended'],
+  overrides: [],
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
     project: ['./tsconfig.json'],
   },
-  plugins: [
-    'react',
-  ],
+  plugins: ['react'],
   rules: {
     'comma-dangle': ['error', {
       arrays: 'always-multiline',
@@ -24,6 +18,7 @@ module.exports = {
     }],
     'react/react-in-jsx-scope': 'off',
     '@typescript-eslint/comma-dangle': 'off',
+    '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/no-empty-interface': [
       'error',
       {
