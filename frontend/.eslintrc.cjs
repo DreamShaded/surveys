@@ -24,6 +24,18 @@ module.exports = {
     }],
     'react/react-in-jsx-scope': 'off',
     '@typescript-eslint/comma-dangle': 'off',
+    '@typescript-eslint/no-empty-interface': [
+      'error',
+      {
+        allowSingleExtends: true,
+      },
+    ],
+    'jsx-quotes': [
+      'error',
+      'prefer-single',
+    ],
+    'space-before-function-paren': 'off',
+    '@typescript-eslint/space-before-function-paren': 'off',
   },
   settings: {
     react: {

@@ -1,7 +1,7 @@
 
-export default function Index (): JSX.Element {
+export default function Index(): JSX.Element {
   return (
-    <div className="App">
+    <div className='App'>
       <h1>hello</h1>
     </div>
   )

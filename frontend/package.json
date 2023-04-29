@@ -7,7 +7,9 @@
     "dev": "vite",
     "serve": "npm run dev",
     "start": "npm run dev",
-    "lint": "eslint src --ext .ts,.tsx,.js,.jsx --fix",
+    "lint:scripts": "eslint src --ext .ts,.tsx,.js,.jsx --fix",
+    "lint:styles": "stylelint ./**/*.{css,scss} --fix",
+    "lint": "npm run lint:scripts && npm run lint:styles",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
@@ -33,6 +35,10 @@
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.32.2",
     "sass": "^1.61.0",
+    "stylelint": "^15.6.0",
+    "stylelint-config-idiomatic-order": "^9.0.0",
+    "stylelint-config-standard": "^33.0.0",
+    "stylelint-config-standard-scss": "^8.0.0",
     "typescript": "^5.0.4",
     "vite": "^4.2.0"
   }
