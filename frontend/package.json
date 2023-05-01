@@ -11,9 +11,7 @@
     "lint:styles": "stylelint ./**/*.{css,scss} --fix",
     "lint": "npm run lint:scripts && npm run lint:styles",
     "build": "tsc && vite build",
-    "preview": "vite preview",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "preview": "vite preview"
   },
   "dependencies": {
     "antd": "^5.4.0",
@@ -25,13 +23,6 @@
     "sort-by": "^0.0.2"
   },
   "devDependencies": {
-    "@storybook/addon-essentials": "^7.0.7",
-    "@storybook/addon-interactions": "^7.0.7",
-    "@storybook/addon-links": "^7.0.7",
-    "@storybook/blocks": "^7.0.7",
-    "@storybook/react": "^7.0.7",
-    "@storybook/react-vite": "^7.0.7",
-    "@storybook/testing-library": "^0.0.14-next.2",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@types/react-router-dom": "^5.3.3",
@@ -50,7 +41,6 @@
     "stylelint-config-idiomatic-order": "^9.0.0",
     "stylelint-config-standard": "^33.0.0",
     "stylelint-config-standard-scss": "^8.0.0",
-    "storybook": "^7.0.7",
     "typescript": "^5.0.4",
     "vite": "^4.2.0"
   }
