@@ -48,7 +48,7 @@
     "jest-environment-jsdom": "^29.5.0",
     "msw": "^1.2.1",
     "prop-types": "^15.8.1",
-    "react-snap": "^0.2.0",
+    "react-snap": "^1.23.0",
     "sass": "^1.61.0",
     "stylelint": "^15.6.0",
     "stylelint-config-idiomatic-order": "^9.0.0",
