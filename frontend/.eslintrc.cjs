@@ -3,14 +3,25 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: ['plugin:react/recommended', 'standard-with-typescript', 'plugin:storybook/recommended'],
+  extends: [
+    'plugin:react/recommended',
+    'standard-with-typescript',
+    'plugin:jest-dom/recommended',
+    'plugin:testing-library/react',
+  ],
   overrides: [],
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
-    project: ['./tsconfig.json'],
+    project: [
+      './tsconfig.json',
+    ],
   },
-  plugins: ['react'],
+  plugins: [
+    'react',
+    'testing-library',
+    'jest-dom',
+  ],
   rules: {
     'comma-dangle': ['error', {
       arrays: 'always-multiline',
@@ -31,6 +42,17 @@ module.exports = {
     ],
     'space-before-function-paren': 'off',
     '@typescript-eslint/space-before-function-paren': 'off',
+
+    // jest-dom
+    'jest-dom/prefer-checked': 'error',
+    'jest-dom/prefer-enabled-disabled': 'error',
+    'jest-dom/prefer-required': 'error',
+    'jest-dom/prefer-to-have-attribute': 'error',
+    // testing-library
+    'testing-library/await-async-query': 'error',
+    'testing-library/no-await-sync-query': 'error',
+    'testing-library/no-debugging-utils': 'warn',
+    'testing-library/no-dom-import': 'off',
   },
   settings: {
     react: {
