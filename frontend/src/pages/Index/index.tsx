@@ -1,4 +1,5 @@
 import { Layout, Space } from 'antd'
+
 const { Header, Footer, Content } = Layout
 
 export default function Index(): JSX.Element {
