@@ -1,5 +1,5 @@
 
-export default function Index(): JSX.Element {
+export default function Index(): React.JSX {
   return (
     <div className='App'>
       <h1>hello</h1>
