@@ -1,7 +1,7 @@
 {
-  "name": "frontend",
+  "name": "surveys-frontend",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "dev": "vite --port 3000",
     "serve": "yarn dev",
