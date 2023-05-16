@@ -9,8 +9,16 @@ export default defineConfig({
     alias: {
       '@/src': path.resolve(__dirname, './src'),
       '@/pages': path.resolve(__dirname, './src/pages'),
-      '@/shared/': path.resolve(__dirname, './src/shared'),
+      '@/shared': path.resolve(__dirname, './src/shared'),
+      '@/styles': path.resolve(__dirname, './src/assets/styles'),
       '@/icons': path.resolve(__dirname, './src/assets/icons/index.ts'),
+    },
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: '@import "@/styles/common.scss";',
+      },
     },
   },
 })
