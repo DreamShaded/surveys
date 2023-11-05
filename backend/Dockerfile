@@ -1,5 +1,5 @@
 # Pull base image
-FROM python:3.10.11-slim-bullseye
+FROM python:3.10.13-slim-bullseye
 
 # Set environment variables
 # disables an automatic check for pip updates each time
